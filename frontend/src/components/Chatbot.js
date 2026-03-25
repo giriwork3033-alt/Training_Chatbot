@@ -19,7 +19,7 @@ export default function Chatbot() {
     setChat((prev) => [...prev, userMsg]);
 
     try {
-      const res = await axios.post("http://localhost:5000/chat", {
+      const res = await axios.post("https://training-backend-sct5.onrender.com/chat", {
         message: msg,
       });
 
