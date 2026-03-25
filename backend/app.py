@@ -31,6 +31,7 @@ def chat():
         print("FULL ERROR:", e)
         return jsonify({"reply": "Backend error"}), 500
 
+import os
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
