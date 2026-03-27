@@ -20,7 +20,7 @@ def chat():
         print("User message:", user_msg)
 
         response = client.chat.completions.create(
-            model="groq/compound",
+            model="mixtral-8x7b-32768",
             messages=[{"role": "user", "content": user_msg}]
         )
 
