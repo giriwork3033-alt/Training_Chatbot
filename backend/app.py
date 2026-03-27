@@ -27,7 +27,7 @@ def chat():
 
         # Groq API call
         response = client.chat.completions.create(
-            model="llama3-8b-8192",   # ✅ stable working model
+            model="llama-3.1-8b-instant",   # ✅ stable working model
             messages=[
                 {"role": "user", "content": user_msg}
             ]
