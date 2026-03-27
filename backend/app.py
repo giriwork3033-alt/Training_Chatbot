@@ -3,7 +3,7 @@ from flask_cors import CORS
 from groq import Groq
 import os
 
-from openai import OpenAI
+
 
 
 app = Flask(__name__)
@@ -28,8 +28,9 @@ def chat():
         return jsonify({"reply": reply})
 
     except Exception as e:
-        print("FULL ERROR:", e)
-        return jsonify({"reply": "Backend error"}), 500
+        import traceback
+        traceback.print_exc()   # 👈 shows full error in Render logs
+        return jsonify({"reply": str(e)}), 500
 
 import os
 
